@@ -1,1 +1,72 @@
-@import 'example-directory/import-me';
+@import "reset";
+@import "vars";
+
+/* Main Styles */
+
+body {
+	font-family: Sans-Serif;
+	// min-height: 100vh;
+}
+
+/* Intro */
+
+.intro {
+	background-color: $blue;
+	padding: $padding;
+}
+
+.intro__heading {
+	color: $white;
+	font-size: 2.074rem;
+	font-weight: bold;
+}
+
+/* Demo */
+
+.demo {
+	padding: $padding;
+}
+
+/* Flex */
+
+.flex-container {
+	-ms-box-orient: horizontal;
+	display: flex;
+}
+
+.flex-wrap {
+	-webkit-flex-wrap: wrap;
+	flex-wrap: wrap; 
+}
+
+.flex-wrap li {
+  // background: $yellow;
+}
+
+.flex-item {
+	border-top: 5px solid $yellow;
+	border-bottom: 1px solid gray;
+	border-left: 1px solid gray;
+	border-right: 1px solid gray;
+
+  padding: 5px;
+  width: 200px;
+  height: 100px;
+  margin: 10px;
+  
+  line-height: 100px;
+  color: gray;
+  font-weight: bold;
+  font-size: 2em;
+  text-align: center;
+}
+
+// .side-bar {
+// 	color: white;
+// 	background: #282C2D;
+// 	height: 100vh;
+
+// 	/* Flex */
+// 	flex: 0 0 auto;
+// 	width: 230px;
+// }
