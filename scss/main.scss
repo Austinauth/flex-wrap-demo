@@ -12,7 +12,7 @@ body {
 
 .intro {
 	background-color: $blue;
-	padding: $padding;
+	padding: 2rem 5%;
 }
 
 .intro__heading {
@@ -24,10 +24,11 @@ body {
 /* Demo */
 
 .demo {
-	padding: $padding;
+	margin: 0 auto;
+	max-width: 1200px;
+	padding: 2rem 0;
+	width: 90%;
 }
-
-/* Flex */
 
 .flex-container {
 	-ms-box-orient: horizontal;
@@ -39,26 +40,46 @@ body {
 	flex-wrap: wrap; 
 }
 
-.flex-wrap li {
-  // background: $yellow;
-}
-
 .flex-item {
-	border-top: 5px solid $yellow;
+
 	border-bottom: 1px solid gray;
 	border-left: 1px solid gray;
 	border-right: 1px solid gray;
-
-  padding: 5px;
-  width: 200px;
-  height: 100px;
-  margin: 10px;
+	border-top: 5px solid $yellow;
   
-  line-height: 100px;
   color: gray;
-  font-weight: bold;
   font-size: 2em;
+  font-weight: bold;
+  height: 100px;
+  line-height: 100px;
+  margin-bottom: 1rem;
+  padding: 5px;
   text-align: center;
+
+  /* Flex */
+  flex-grow: 1; // Amount of space inside the flex container the item should take up.
+  width: 100%;
+
+  @media screen and (min-width: 650px){
+    width: 48%;
+
+    &:nth-child(odd) {
+    	margin-right: 2%;
+    }
+
+    &:last-child {
+    	margin-right: 0;
+    }
+  }
+
+  @media screen and (min-width: 900px){
+   width: 32%;
+    margin-right: 2%;
+
+    &:nth-child(3n) {
+    	margin-right: 0;
+    }
+  }
 }
 
 // .side-bar {
